@@ -1,0 +1,17 @@
+{
+  "name": "certificate-maker",
+  "version": "2.0.0",
+  "private": true,
+  "dependencies": {
+    "camelcase": "^5.0.0",
+    "commander": "^2.19.0",
+    "csv": "^5.1.0",
+    "googleapis": "27",
+    "npm": "^6.5.0",
+    "nunjucks": "^3.1.6",
+    "puppeteer": "^1.11.0",
+    "puppeteer-core": "^1.11.0",
+    "yaml": "^1.2.0",
+    "yarn": "^1.12.3"
+  }
+}
