@@ -42,6 +42,18 @@ All images, regardless of the template they belong to, should be placed in
 ./certificates/intermediaries/ can be used to reference them during the
 creation of PDF certificates.
 
+## Creating a Data Source
+
+Data sources can be Google Sheets or locally stored CSV files. Every data
+source is assumed to begin with a single header row which specifies column
+names, followed by the actual data.
+
+Further, every data source should have two special columns: Template and
+File. Data in the Template column specifies which template should be used
+for a given row. The File column should, initially, contain no data, and
+is where Certificate Maker will save a path or URL to the resulting PDF
+file for each row.
+
 ## Notes
 
 This is not an official Google product.
