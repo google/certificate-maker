@@ -1,3 +1,13 @@
+# CONFIGURING THE RESULTING PDF
+
+# You can use a subset of the options provided by Puppeteer's
+# PDF function here. Learn more at:
+
+#  https://github.com/GoogleChrome/puppeteer/blob/v1.11.0/docs/api.md#pagepdfoptions
+
+landscape: true
+format: Letter
+
 # SPECIFY THE DESIRED FILENAME
 
 # The intermediary files and resulting certificate PDF files
