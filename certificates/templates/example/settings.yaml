@@ -1,0 +1,17 @@
+# Certificate Maker can take a CSV file or a Google Sheet as
+# a data source. If both are specified, it will choose the CSV
+# file.
+
+# By default, this example reads from an included CSV file.
+# If you want to test with a Google Sheet, be sure to comment
+# out the CSV file value below!
+
+csv_file: docs/example.csv
+
+# The example Google Sheet referenced below is read-only, so
+# you'll need to clone it then insert your new sheet's ID below.
+# If you don't, Certificate Maker will not be able to save the
+# path or URL to the resulting certificate PDF files.
+
+# google_sheet_id: 1liFiBCoyKv3Slt0sJJxvU9wb_Kbr3aejaa0HiPrxvOU
+# worksheet: Sheet1
