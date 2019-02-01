@@ -18,4 +18,4 @@
 
 yarn install
 
-ln -s certificates/templates/images certificates/intermediary/images
+ln -s certificates/templates/images certificates/intermediaries/images
