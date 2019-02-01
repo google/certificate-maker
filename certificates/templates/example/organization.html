@@ -10,20 +10,26 @@
       <h2>{{ Project }}</h2>
       <div id="signature">
         <!-- Note where the image is stored! All images either need to (a) be
-             stored in ../images/ or (b) be referenced with an absolute path.
-             This ensures the path is correct even with the intermediary HTML
-             files are made and stored, which are stored here by default: 
+             stored in ./certificate-maker/images/ or (b) be referenced with
+             an absolute path. This ensures the path is correct even with the
+             intermediary HTML files are made and stored, which are stored here
+             by default:
 
                ./certificate-maker/certificates/intermediaries/TEMPLATE_NAME
+
+             Also note that the signature image below is a PNG with transparent
+             background. A real, scanned signature may end up as a JPG...
+             If it does, make sure the image background color matches the
+             HTML document's body background color!
         -->
-        <img src="../images/example/signature.jpg"><br>
+        <img src="../../images/example/signature.png"><br>
         Certificate Maker
       </div>
     </main>
     <footer>
-      <!-- Note how we have to reference Issue Date differently than the other
-           values. That's because variable names can't include a space, which
-           Issue Date does, or any special characters.
+      <!-- Note how we have to reference ID # and Issue Date differently than
+           values like Name. That's because variable names can't include a space,
+           which Issue Date does, or any special characters, which ID # does.
 
            If a variable name includes a space or special character, you can
            reference it like h["COLUMN HEADER NAME"] below.
@@ -33,7 +39,7 @@
 
              https://mozilla.github.io/nunjucks/templating.html
       -->
-      <span>Certificate ID #{{ ID }} issued on {{ h["Issue Date"] }}</span>
+      <span>Certificate ID #{{ h["ID #"] }} issued on {{ h["Issue Date"] }}</span>
     </footer>
   </body>
 </html>

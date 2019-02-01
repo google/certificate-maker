@@ -13,9 +13,14 @@ installed.
 1. Clone the repository in your local environment.
 2. Run the setup scripts: first pre.sh, then mac.sh or ubuntu.sh depending on
    your operating system, and then post.sh.
-3. Update the configuration file.
-4. Create a template.
-5. Invoke the index.js file!
+
+If things are setup properly, you should be able to run the following command
+with no errors:
+
+```./index.js --csv_file docs/example.csv --no-upload```
+
+Once things are running, you can experiment with creating templates, and
+adjusting configuration files!
 
 ## Creating a New Template
 
