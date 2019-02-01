@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <main>
+      <span>This certificate is awarded to</span>
+      <h1>{{ Name }}</h1>
+      <span>for the organization's work on</span>
+      <h2>{{ Project }}</h2>
+      <div id="signature">
+        <!-- Note where the image is stored! All images either need to (a) be
+             stored in ../images/ or (b) be referenced with an absolute path.
+             This ensures the path is correct even with the intermediary HTML
+             files are made and stored, which are stored here by default: 
+
+               ./certificate-maker/certificates/intermediaries/TEMPLATE_NAME
+        -->
+        <img src="../images/example/signature.jpg"><br>
+        Certificate Maker
+      </div>
+    </main>
+    <footer>
+      <!-- Note how we have to reference Issue Date differently than the other
+           values. That's because variable names can't include a space, which
+           Issue Date does, or any special characters.
+
+           If a variable name includes a space or special character, you can
+           reference it like h["COLUMN HEADER NAME"] below.
+
+           You can learn more about variable names *and* some special features
+           the Nunjucks templating engine gives you (thanks, Nunjucks!):
+
+             https://mozilla.github.io/nunjucks/templating.html
+      -->
+      <span>Certificate ID #{{ ID }} issued on {{ h["Issue Date"] }}</span>
+    </footer>
+  </body>
+</html>

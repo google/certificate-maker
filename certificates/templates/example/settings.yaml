@@ -1,3 +1,20 @@
+# SPECIFY THE DESIRED FILENAME
+
+# The intermediary files and resulting certificate PDF files
+# will be saved using the pattern you specify below. You can
+# insert values from your data source here the way you do in
+# the HTML files!
+
+# If the column header isn't a valid variable name, like if
+# if it contains spaces, you can access it like so:
+
+#   {{ h["COLUMN HEADER NAME"] }}
+
+file_name: Certificate for {{ Name }}
+
+
+# SETTING UP YOUR DATA SOURCE
+
 # Certificate Maker can take a CSV file or a Google Sheet as
 # a data source. If both are specified, it will choose the CSV
 # file.
@@ -15,3 +32,14 @@ csv_file: docs/example.csv
 
 # google_sheet_id: 1liFiBCoyKv3Slt0sJJxvU9wb_Kbr3aejaa0HiPrxvOU
 # worksheet: Sheet1
+
+
+# UPLOADING RESULTS TO GOOGLE DRIVE
+
+# If you want to test uploading the resulting PDF files to
+# Google Drive, change the value below to true, then add the ID
+# number for the specific Google Drive folder you'd like to
+# put the files in - make sure to uncomment that line!
+
+upload: false
+# google_folder_id: 
