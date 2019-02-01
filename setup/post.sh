@@ -17,5 +17,3 @@
 # INSTALL NODE MODULES
 
 yarn install
-
-ln -s certificates/templates/images certificates/intermediaries/images
