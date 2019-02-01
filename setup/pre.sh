@@ -26,3 +26,7 @@ cd ..
 
 mkdir -p ./certificates/templates/images
 mkdir -p ./certificates/results
+
+# MAKE SURE SCRIPT IS EXECUTABLE
+
+chmod +x index.js
