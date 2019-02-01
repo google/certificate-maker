@@ -88,24 +88,28 @@ async function main() {
 	console.log('settings loaded:');
 	console.log(settings);
 
-	// load Google Client
-	console.log('initialize OAuth client...');
-	googleClient = new GoogleClient({
-		credentials_file: settings.credentials_file,
-		token_file: settings.token_file,
-		scopes: SCOPES
-	});
-	await googleClient.initialize();
+	// load Google Client if necessary
+	if (!settings.csv_file | settings.upload) {
+		console.log('initialize OAuth client...');
+		googleClient = new GoogleClient({
+			credentials_file: settings.credentials_file,
+			token_file: settings.token_file,
+			scopes: SCOPES
+		});
+		await googleClient.initialize();
+	}
 
-	// load Google Drive
-	console.log('initializing drive connection...');
-	googleDrive = new GoogleDrive({
-		upload: settings.upload,
-		replace: settings.replace,
-		google_client: googleClient,
-		folder_id: settings.google_folder_id
-	});
-	await googleDrive.initialize();
+	// load Google Drive if necessary
+	if (!settings.csv_file | settings.upload) {
+		console.log('initializing drive connection...');
+		googleDrive = new GoogleDrive({
+			upload: settings.upload,
+			replace: settings.replace,
+			google_client: googleClient,
+			folder_id: settings.google_folder_id
+		});
+		await googleDrive.initialize();
+	}
 
 	// load data source
 	console.log('initialize data source...');
