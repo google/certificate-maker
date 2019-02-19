@@ -1,0 +1,7 @@
+.git
+.cache
+*.md
+node_modules
+Dockerfile
+docs
+certificates
