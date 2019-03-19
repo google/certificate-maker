@@ -16,7 +16,6 @@
 
 # DOWNLOAD FONTS
 
-mkdir fonts
 cd fonts
 wget https://noto-website-2.storage.googleapis.com/pkgs/Noto-hinted.zip
 unzip Noto-hinted.zip
