@@ -1,6 +1,7 @@
 yarn.lock
 node_modules
 certificates/results
+certificates/intermediaries
 .DS_Store
 _DS_Store
 config/auth
