@@ -7,13 +7,6 @@ Google Drive.
 
 ## Getting Started
 
-This assumes you already have [yarn](https://yarnpkg.com/lang/en/docs/install/)
-installed.
-
-1. Clone the repository in your local environment.
-2. Run the setup scripts: first pre.sh, then mac.sh or ubuntu.sh depending on
-   your operating system, and then post.sh.
-
 If things are setup properly, you should be able to run the following command
 with no errors:
 
@@ -21,6 +14,26 @@ with no errors:
 
 Once things are running, you can experiment with creating templates, and
 adjusting configuration files!
+
+### Installation on Mac OS X
+
+1. Clone the repository into your local environment: `git clone https://github.com/google/certificate-maker.git`
+2. Go into the repository directory: `cd certificate-maker`
+3. Install [Homebrew](https://brew.sh/).
+4. Install wget: `brew install wget`
+5. Install fontconfig: `brew install fontconfig`
+6. Install yarn: `brew install yarn`
+7. Run the pre-setup script: `./setup/pre.sh`
+8. Run the Mac OS X setup script: `./setup/mac.sh`
+9. Run the post-setup script: `./setup/post.sh` 
+
+### Installation on Ubuntu
+
+1. Clone the repository into your local environment: `git clone https://github.com/google/certificate-maker.git`
+2. Go into the repository directory: `cd certificate-maker`
+3. Run the pre-setup script: `./setup/pre.sh`
+4. Run the Mac OS X setup script: `./setup/mac.sh`
+5. Run the post-setup script: `./setup/post.sh` 
 
 ## Creating a New Template
 

@@ -16,6 +16,7 @@
 
 # DOWNLOAD FONTS
 
+mkdir fonts
 cd fonts
 wget https://noto-website-2.storage.googleapis.com/pkgs/Noto-hinted.zip
 unzip Noto-hinted.zip
@@ -23,8 +24,12 @@ cd ..
 
 # CREATE KEY DIRECTORIES
 
-mkdir -p ./certificates/templates/images
-mkdir -p ./certificates/results
+mkdir certificates || true
+mkdir certificates/templates || true
+mkdir certificates/results || true
+mkdir certificates/intermediaries || true
+mkdir certificates/images || true
+mkdir config/auth || true
 
 # MAKE SURE SCRIPT IS EXECUTABLE
 

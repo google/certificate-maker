@@ -36,7 +36,8 @@ apt -y install google-chrome-stable
 # INSTALL FONTS
 
 mkdir -p /usr/share/fonts/opentype/noto
-mv fonts/*otf /usr/share/fonts/opentype/noto
+mv fonts/*otf /usr/share/fonts/opentype/noto || true
+mv fonts/*ttf /usr/share/fonts/opentype/noto || true
 fc-cache -f -v
 
 rm -fr fonts
