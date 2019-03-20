@@ -17,7 +17,8 @@
 # INSTALL FONTS
 
 cd fonts
-mv *ttf ~/Library/Fonts
+mv *ttf ~/Library/Fonts || true
+mv *otf ~/Library/Fonts || true
 fc-cache -f -v
 
 # CLEAN UP

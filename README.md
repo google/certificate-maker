@@ -17,7 +17,8 @@ adjusting configuration files!
 
 ### Installation on Mac OS X
 
-1. Clone the repository into your local environment: `git clone https://github.com/google/certificate-maker.git`
+1. Clone the repository into your local environment: `git clone
+   https://github.com/google/certificate-maker.git`
 2. Go into the repository directory: `cd certificate-maker`
 3. Install [Homebrew](https://brew.sh/).
 4. Install wget: `brew install wget`
@@ -30,11 +31,24 @@ adjusting configuration files!
 
 ### Installation on Ubuntu
 
-1. Clone the repository into your local environment: `git clone https://github.com/google/certificate-maker.git`
+1. Clone the repository into your local environment: `git clone
+   https://github.com/google/certificate-maker.git`
 2. Go into the repository directory: `cd certificate-maker`
 3. Run the pre-setup script: `./setup/pre.sh`
 4. Run the Mac OS X setup script: `./setup/mac.sh`
 5. Run the post-setup script: `./setup/post.sh` 
+
+### Connecting to Google Drive and Google Sheets
+
+You'll need to authenticate with Google Drive in order to upload files or read
+data from Google Sheets:
+
+1. Create a new Google Cloud Platform project.
+2. Enable the Google Drive API and Google Sheets API.
+3. Create OAuth Client credentials, download and save as
+   ./config/auth/credentials.json
+4. Next time you run Certificate Maker in a way that requires use of the Google
+   APIs, you'll be prompted to authenticate.
 
 ## Creating a New Template
 
