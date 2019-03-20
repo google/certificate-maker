@@ -22,6 +22,7 @@ adjusting configuration files!
 3. Install [Homebrew](https://brew.sh/).
 4. Install wget: `brew install wget`
 5. Install fontconfig: `brew install fontconfig`
+6. Install Node.js: `brew install node`
 6. Install yarn: `brew install yarn`
 7. Run the pre-setup script: `./setup/pre.sh`
 8. Run the Mac OS X setup script: `./setup/mac.sh`
