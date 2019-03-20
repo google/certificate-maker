@@ -58,21 +58,22 @@ module.exports = class GoogleClient {
   }
 
   initialize() {
-    var credentials = this.loadCredentials();
-    this.oAuth2Client = this.parseCredentials(credentials);
+    return new Promise((resolve, reject) => {
+      var credentials = this.loadCredentials();
+      this.oAuth2Client = this.parseCredentials(credentials);
 
-    try {
-      var token = this.loadToken();
-      this.oAuth2Client = this.parseToken(token);
-    } catch(error) {
-      this.getNewToken((result) => {
-        return result;
-      }, (error) => {
-        throw(error)
-      });
-    }
-
-    return this.oAuth2Client;
+      try {
+        var token = this.loadToken();
+        this.oAuth2Client = this.parseToken(token);
+        resolve(this.oAuth2Client);
+      } catch(error) {
+        this.getNewToken((result) => {
+          resolve(this.oAuth2Client);
+        }, (error) => {
+          reject(error);
+        });
+      }
+    });
   }
 
   getNewToken(onSuccess, onError) {
