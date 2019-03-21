@@ -13,8 +13,10 @@
 // limitations under the License.
 
 const fs = require('fs');
+const he = require('he');
 const nunjucks = require('nunjucks');
 const readline = require('readline');
+const sanitize = require('sanitize-filename');
 const YAML = require('yaml');
 
 const FileGenerator = require('./file_generator.js');
@@ -171,6 +173,9 @@ class TemplateInstance {
 		return new Promise((resolve, reject) => {
 			this.file_contents = this.template.renderContents(this.render_package);
 			this.file_name = this.template.renderFileName(this.render_package);
+
+			this.file_name = he.decode(this.file_name);
+			this.file_name = sanitize(this.file_name);
 
 			resolve(this);
 		});
