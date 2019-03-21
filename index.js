@@ -54,7 +54,7 @@ async function processRecords() {
 
 		// load template from record if available
 		var template;
-		if (dataSource.lookup.template_index &&
+		if (typeof dataSource.lookup.template_index !== 'undefined' &&
 			record[dataSource.template_header]) {
 			template = record[dataSource.template_header];
 		}

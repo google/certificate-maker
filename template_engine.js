@@ -159,7 +159,8 @@ class TemplateInstance {
 			this.template = this.parent.getTemplate(this.template_name);
 
 			this.render_package.s = {
-				path: __dirname + '/' + this.parent.template_folder + this.template.path_slug + '/'
+				path: __dirname + '/' + this.parent.template_folder + this.template.path_slug + '/',
+				timestamp: (+ new Date())
 			};
 
 			resolve(this.template);
