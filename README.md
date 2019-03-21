@@ -12,6 +12,11 @@ with no errors:
 
 ```./index.js --csv_file docs/example.csv --no-upload```
 
+After you've configured Certificate Maker to connect with Google Drive, you can
+issue commands such as:
+
+```./index.js --google_sheet_id [...] --worksheet [...] --google_folder_id [...]```
+
 Once things are running, you can experiment with creating templates, and
 adjusting configuration files!
 
