@@ -40,7 +40,7 @@ adjusting configuration files!
    https://github.com/google/certificate-maker.git`
 2. Go into the repository directory: `cd certificate-maker`
 3. Run the pre-setup script: `./setup/pre.sh`
-4. Run the Mac OS X setup script: `./setup/ubuntu.sh`
+4. Run the Ubuntu setup script: `./setup/ubuntu.sh`
 5. Run the post-setup script: `./setup/post.sh` 
 
 ### Connecting to Google Drive and Google Sheets
